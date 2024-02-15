@@ -6,22 +6,6 @@
 using namespace std;
 
 namespace algorithm {
-	class Dorm {
-	private:
-		float _cockroaches;
-		float _functioning_bathrooms;
-	public:
-		Dorm(float cockroaches, float functioning_bathrooms): _cockroaches(cockroaches), _functioning_bathrooms(functioning_bathrooms) {}
-		float get_cockroaches() const {
-			return _cockroaches;
-		}
-		float get_bathrooms() const{
-			return _functioning_bathrooms;
-		}
-		float get_result() const {
-			return (_functioning_bathrooms / _cockroaches) * 10;
-		}
-	};
 	vector<int> random_seed(int a, int b, int n, int seed) {
 		vector<int> res;
 		mt19937 generator(seed);
@@ -369,18 +353,8 @@ namespace algorithm {
 	bool operator>(const string& lhs, const string& rhs) {
 		return lhs.compare(rhs) > 0;
 	}
-	bool operator>(const Dorm a, const Dorm b) {
-		return a.get_result() > b.get_result();
-	}
-	bool operator<(const Dorm a, const Dorm b) {
-		return a.get_result() < b.get_result();
-	}
 	ostream& operator <<(ostream& os, const stats description) {
 		os << "Compasion count: " << description.comparison_count << "; " << "Copy count: " << description.copy_count << endl;
-		return os;
-	}
-	ostream& operator << (ostream& os, const Dorm vec) {
-		os << "Bathrooms: " << vec.get_bathrooms() << "| Cockroaches: " << vec.get_cockroaches() << "| Result: " << vec.get_result();
 		return os;
 	}
 }

@@ -74,20 +74,3 @@ TEST(Vector, ReversedOrdered) {
 	vector<int> a = reversed_ordered_vector(100);
 	cout << a;
 }
-TEST(Sorting, MyClass1) {
-	Dorm a(100.1, 3.4);
-	Dorm b(200.5, 7.8);
-	vector<Dorm> c;
-	c.push_back(a);
-	c.push_back(b);
-	cout << c;
-}
-TEST(Sorting, MyClass2) {
-	Dorm a(100.1, 20);
-	Dorm b(100.5, 7.8);
-	vector<Dorm> c;
-	c.push_back(a);
-	c.push_back(b);
-	stats d = pyramid_sort(c);
-	cout << c;
-}
